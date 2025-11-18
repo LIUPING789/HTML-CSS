@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_伸缩容器_伸缩项目</title>
+</head>
+
+
+
+<style>
+    .outer {
+        width: 1000px;
+        height: 600px;
+        background-color: grey;
+        /* 开启flex 布局 */
+        display: flex;
+    }
+
+    .inner {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .inner3 {
+        display: flex;
+    }
+</style>
+
+<body>
+
+    <div class="outer">
+
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner inner3">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
