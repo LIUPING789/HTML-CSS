@@ -7,7 +7,7 @@
     <title>我的官网</title>
 
     <style>
-        /* 天才第一步，重置样式 */
+        /* 重置样式 */
         * {
             font-family: Arial;
             font-size: 14px;
@@ -24,14 +24,14 @@
             list-style: none;
         }
 
-        /* 设置窗体高度 */
+        /* 设置窗体宽高 */
         html,
         body {
             width: 100%;
             height: 100%;
         }
 
-        /* 设置背景 */
+        /* 调协背景 */
         body {
             background-image: url(./images/bg.jpg);
             background-repeat: no-repeat;
@@ -41,41 +41,36 @@
         .page-header {
             height: 70px;
             background-color: rgba(0, 0, 0, 0.7);
-            /* 开启flex */
+            padding: 0 20px;
+            /* 开起flex布局 */
             display: flex;
-            /* 主侧对齐方式 */
+            /* 主轴对齐方式 */
             justify-content: space-between;
             /* 侧轴对齐方式 */
             align-items: center;
-            padding: 0 20px;
         }
 
-        /* 头部导航 */
         .header-nav {
-            /* 开启flex布局 */
             display: flex;
         }
 
-        /* 设置导航样式*/
         .header-nav li a {
-            font-size: 20px;
             color: white;
+            font-size: 20px;
             border: 1px solid white;
             border-radius: 8px;
             padding: 10px;
             margin-right: 20px;
         }
 
-        /* 导航最后一项，设置外边距 */
         .header-nav li:last-child a {
-            margin: 0;
+            margin: 0px;
         }
 
-        /* 内容主体宽高 */
-        .page-content {
+        .page-centent {
             width: 100%;
-            height: calc(100vh - 70px);
-            /* 开启flex布局 */
+            height: calc(100% - 70px);
+            /* 开启flex */
             display: flex;
             /* 主轴对齐方式 */
             justify-content: center;
@@ -83,66 +78,63 @@
             align-items: center;
         }
 
-        /* 内容区域-导航 */
-        .content-nav {
+        .centent-nav {
             width: 1000px;
             height: 300px;
             /* 开启flex布局 */
             display: flex;
-            /* 主轴对齐方式  */
+            /* 主轴对齐方式 */
             justify-content: space-evenly;
             /* 侧轴对齐方式 */
             align-items: center;
         }
 
-        /* 内容区域-导航-item */
-        .content-nav .item {
+        .centent-nav .item {
             width: 180px;
             height: 200px;
-            /* 开启flex布局 */
+            /* 开启flex 布局 */
             display: flex;
-            /* 设置主轴方向 */
+            /* 主轴方向 */
             flex-direction: column;
             /* 主轴对齐方式 */
             justify-content: space-evenly;
-            /* 侧轴对齐方式  */
+            /* 侧轴对齐方式 */
             align-items: center;
-            /* 设置匀速显示 */
+            border-radius: 8px;
+            /* 匀速效果 */
             transition: 0.2s linear;
-            /* 设置鼠标 */
+            /* 鼠标样多 */
             cursor: pointer;
         }
 
-        .content-nav .item span {
-            font-size: 20px;
-            color: white;
+        /* 鼠标悬停效果 */
+        .centent-nav .item:hover {
+            box-shadow: 0 0 10px black;
         }
 
-
-        /* 中间导航-鼠标停留效果 */
-        .content-nav .item:hover {
-            box-shadow: 0px 0px 10px black;
-        }
-
-        /* 设置每项的背景颜色 */
-        .content-nav .item:nth-child(1) {
+        .centent-nav .item:nth-child(1) {
             background-color: #595CA8;
         }
 
-        .content-nav .item:nth-child(2) {
+        .centent-nav .item:nth-child(2) {
             background-color: #FF9D2E;
         }
 
-        .content-nav .item:nth-child(3) {
+        .centent-nav .item:nth-child(3) {
             background-color: #01A6DE;
         }
 
-        .content-nav .item:nth-child(4) {
+        .centent-nav .item:nth-child(4) {
             background-color: #015E91;
         }
 
-        .content-nav .item:nth-child(5) {
+        .centent-nav .item:nth-child(5) {
             background-color: #1DC128;
+        }
+
+        .centent-nav .item span {
+            font-size: 20px;
+            color: white;
         }
     </style>
 </head>
@@ -150,19 +142,19 @@
 <body>
     <!-- 头部 -->
     <header class="page-header">
-        <a href="#"><img src="./images/logo.png" alt=""></a>
+        <img src="./images/logo.png" alt="">
         <ul class="header-nav">
-            <li><a href="#">国内校区</a></li>
-            <li><a href="#">缅甸校区</a></li>
-            <li><a href="#">非洲校区</a></li>
-            <li><a href="#">美国校区</a></li>
-        </ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品中心</a></li>
+            <li><a href="#">新闻资讯</a></li>
+            <li><a href="#">联系我们</a></li>
     </header>
 
-    <!-- 内容部分 -->
-    <div class="page-content">
-        <!-- 中间导航 -->
-        <div class="content-nav">
+    <!-- 内容区域 -->
+    <div class="page-centent">
+        <!-- 中间导航部分 -->
+        <div class="centent-nav">
             <div class="item">
                 <img src="images/item1.png" alt="">
                 <span>我的邮箱</span>
@@ -184,7 +176,6 @@
                 <span>在线客服</span>
             </div>
         </div>
-
     </div>
 
 </body>
